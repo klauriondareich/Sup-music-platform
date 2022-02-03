@@ -1,0 +1,151 @@
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  background-color: #373737;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #373737;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+.dark-body{
+  background-color: #171717;
+}
+ul{
+  padding: 0 20px;
+  margin: 0 20 0px;
+  list-style: none;
+}
+li{
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+li a{
+ color: white;
+ text-decoration: none;
+ font-size: 18px;
+}
+li a:hover{
+ color: #ffda2a;
+ text-decoration: none;
+ border-bottom: 2px solid #ffda2a;
+}
+div.entry-info h1{
+  font-size: 40px;
+}
+div.entry-info p{
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+div.entry-info{
+  padding-top: 40px; 
+}
+.dark-title{
+  color: #fff;
+}
+.middle{
+  padding: 20px 100px;
+  background-image: url("../images/bg-crop.jpg");
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.picture img{
+  border-radius: 30px;
+}
+.btn-create{
+  background-color: #ffda2a;
+  padding: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.btn-playlsit{
+  background-color: #ffda2a;
+  border-radius: 30px;
+  padding: 5px;
+  border: none;
+  text-decoration: none;
+  font-size: 13px;
+}
+.btn-create:hover{
+  background-color: #373737;
+}
+.text-color-white{
+  color: #fff;
+}
+.logo{
+  padding: 10px 20px;
+}
+.play-list-row{
+ padding: 140px 20px;
+ width: 70%;
+ margin: auto;
+}
+.play-list-item{
+ display: inline-block;
+ margin-right: 30px;
+ margin-bottom: 40px;
+}
+.play-list-item img{
+  transition: transform .2s;
+}
+.play-list-row h2{
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+.play-list-item img:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.play-list-item img{
+  border-radius: 5px;
+}
+h2{
+  font-size: 50px;
+  padding-right: 100px;
+}
+.playlists-view{
+  padding: 100px;
+  margin: auto;
+  width: 70%;
+}
+.main-music-item{
+ border-bottom:2px solid #373737;
+ padding: 20px;
+ display: flex;
+ justify-content: space-between;
+}
+.main-music-item:hover{
+ background-color: #ffffff21;
+ cursor: pointer;
+}
+.text-color-grey{
+ color: #ffffff75;
+}
+div.main-music-btn button{
+  background-color: #ffda2a;
+  border-radius: 30px;
+  padding: 6px;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.add-music-bloc{
+  position: relative;
+  left: 800px;
+  padding-bottom: 10px;
+}
+footer{
+  padding: 10px;
+  background-color: #373737;
+}

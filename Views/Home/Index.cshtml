@@ -1,0 +1,25 @@
+﻿
+        <div class="middle">
+             <div class="entry-info dark-title">
+                <h1>Bienvenue sur votre site de musique</h1>
+                <p>Ecoutez de la musique partout où vous êtes.</p>
+                <a class="btn-create text-color-white" href="">Créer une nouvelle playlist</a>
+            </div>
+            <div class="picture">
+                <img src="~/images/picture.jpg" height="500" alt="">
+            </div>
+        </div>
+
+        <div class="">
+            <div class="play-list-row">
+                <h2 class="text-color-white">Mes playlists</h2>
+                @for(var i = 0; i<10; i++){
+                    <div class="play-list-item">
+                        <img src="~/images/picture.jpg" height="200" alt="">
+                        <p class="text-color-white">Les champions du monde</p>
+                        <button class="btn-playlsit text-color-white">Renommer</button>
+                        <a class="btn-playlsit text-color-white" asp-controller="Playlist" asp-action="Display">Afficher</a>
+                    </div>
+                }
+            </div>
+        </div>
