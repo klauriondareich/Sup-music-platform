@@ -14,7 +14,13 @@ namespace projetASPC.Controllers
         }
 
         public IActionResult Index()
+
         {
+            var playlists = new List<Myplaylist>{
+
+                new Myplaylist { Id = 1, title = "Ma chanson du moment"}
+            };
+
             return View();
         }
 
