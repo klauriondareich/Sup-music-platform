@@ -19,9 +19,9 @@ namespace projetASPC.Controllers
         {
             var playlists = new List<Myplaylist>{
 
-                new Myplaylist { Id = 1, title = "Ma chanson du moment"},
-                new Myplaylist { Id = 2, title = "Wenge music"},
-                new Myplaylist { Id = 3, title = "Sur ma route"}
+                new Myplaylist { Id = 1, title = "Ma chanson du moment", imagePath="images/picture.jpg"},
+                new Myplaylist { Id = 2, title = "Wenge music", imagePath="images/picture.jpg"},
+                new Myplaylist { Id = 3, title = "Sur ma route", imagePath="images/picture.jpg"}
             };
 
             var viewModel = new HomeMyplaylistViewModel
