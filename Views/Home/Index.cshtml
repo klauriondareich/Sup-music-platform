@@ -1,4 +1,5 @@
-﻿
+﻿@Model projetASPC.ViewModels.HomeMyplaylistViewModel
+
         <div class="middle">
              <div class="entry-info dark-title">
                 <h1>Bienvenue sur votre site de musique</h1>
@@ -13,10 +14,10 @@
         <div class="">
             <div class="play-list-row">
                 <h2 class="text-color-white">Mes playlists</h2>
-                @for(var i = 0; i<10; i++){
+                @foreach(var playlist in Model.Myplaylist){
                     <div class="play-list-item">
                         <img src="~/images/picture.jpg" height="200" alt="">
-                        <p class="text-color-white">Les champions du monde</p>
+                        <p class="text-color-white">@playlist.title</p>
                         <button class="btn-playlsit text-color-white">Renommer</button>
                         <a class="btn-playlsit text-color-white" asp-controller="Playlist" asp-action="Display">Afficher</a>
                     </div>
