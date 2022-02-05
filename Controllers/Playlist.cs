@@ -4,10 +4,10 @@ namespace projetASPC.Controllers
 {
     public class Playlist : Controller
     {
-        [Route("playlist/view")]
-        public IActionResult Display()
+        [Route("playlist/view/{Id}")]
+        public IActionResult Display(int Id)
         {
-            return View();
+            return View(Id);
         }
     }
 }
