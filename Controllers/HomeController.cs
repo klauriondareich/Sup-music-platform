@@ -2,27 +2,37 @@
 using projetASPC.Models;
 using System.Diagnostics;
 using projetASPC.Models.ViewModels;
+using projetASPC.Data;
 
 namespace projetASPC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+/*        private readonly ILogger<HomeController> _logger;
+*/
+        private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ApplicationDbContext context)
         {
-            _logger = logger;
+            /*            ILogger<HomeController> logger,
+             *            _logger = logger;
+            */
+            _context = context;
         }
+
 
         public IActionResult Index()
 
         {
-            var playlists = new List<Myplaylist>{
+            
+            var playlists = _context.Myplaylist.ToList();
 
-                new Myplaylist { Id = 1, title = "Ma chanson du moment", imagePath="images/picture.jpg"},
+            /*var playlists = new List<Myplaylist>{
+
+                new Myplaylist { Id = 1, title = "Ma chanson du moment", imagePath="images/albums/img2.jpg"},
                 new Myplaylist { Id = 2, title = "Wenge music", imagePath="images/picture.jpg"},
                 new Myplaylist { Id = 3, title = "Sur ma route", imagePath="images/picture.jpg"}
-            };
+            };*/
 
             var viewModel = new HomeMyplaylistViewModel
             {
@@ -32,6 +42,7 @@ namespace projetASPC.Controllers
             return View(viewModel);
         }
 
+       
         public IActionResult Privacy()
         {
             return View();
