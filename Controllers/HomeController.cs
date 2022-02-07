@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using projetASPC.Models;
+using MusicAudioPlayer.Models;
 using System.Diagnostics;
-using projetASPC.Models.ViewModels;
-using projetASPC.Data;
+using MusicAudioPlayer.Models.ViewModels;
+using MusicAudioPlayer.Data;
 
-namespace projetASPC.Controllers
+namespace MusicAudioPlayer.Controllers
 {
     public class HomeController : Controller
     {
@@ -26,13 +26,6 @@ namespace projetASPC.Controllers
         {
             
             var playlists = _context.Myplaylist.ToList();
-
-            /*var playlists = new List<Myplaylist>{
-
-                new Myplaylist { Id = 1, title = "Ma chanson du moment", imagePath="images/albums/img2.jpg"},
-                new Myplaylist { Id = 2, title = "Wenge music", imagePath="images/picture.jpg"},
-                new Myplaylist { Id = 3, title = "Sur ma route", imagePath="images/picture.jpg"}
-            };*/
 
             var viewModel = new HomeMyplaylistViewModel
             {

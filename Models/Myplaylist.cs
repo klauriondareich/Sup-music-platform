@@ -1,4 +1,4 @@
-﻿namespace projetASPC.Models
+﻿namespace MusicAudioPlayer.Models
 {
     public class Myplaylist
     {

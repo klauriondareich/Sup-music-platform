@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using projetASPC.Data;
+using MusicAudioPlayer.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

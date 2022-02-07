@@ -1,4 +1,4 @@
-﻿namespace projetASPC.Models
+﻿namespace MusicAudioPlayer.Models
 {
     public class Music
     {
@@ -7,5 +7,7 @@
         public string? author {get; set;}
         public string? published {get; set;}
         public string? file_path {get; set;}
+        public string? playId {get; set;}
+
     }
 }

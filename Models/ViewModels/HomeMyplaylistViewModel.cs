@@ -1,4 +1,4 @@
-﻿namespace projetASPC.Models.ViewModels
+﻿namespace MusicAudioPlayer.Models.ViewModels
 {
     public class HomeMyplaylistViewModel
     {
