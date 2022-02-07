@@ -20,7 +20,7 @@ namespace MusicAudioPlayer.Controllers
         {
             var playlistObj = _context.Myplaylist.FirstOrDefault(p => p.Id == Id);
 
-            var musics = _context.Musics.Where(item => item.Id == Id).ToList();
+            var musics = _context.Musics.Where(item => item.playId == Id).ToList();
 
             if (playlistObj == null) return NotFound();
 

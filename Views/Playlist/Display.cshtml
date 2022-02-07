@@ -1,13 +1,26 @@
-﻿@Model MusicAudioPlayer.ViewModels.DisplayMusicViewModel
+﻿
 
     <div class="playlists-view">
         <div>
+
             <div class="playlist-entry">
                 <img src="@Url.Content(@Model.Myplaylist.imagePath)" height="200" alt="image"> <br> <br>
-                <span class="text-color-white">@Model.Musics.Count chansons</span> <br> <br>
+                 <span class="text-color-white">@Model.Musics.Count chansons</span> <br> <br> <br>
+
+                <div id="waveform"></div>
+
+                <div  class="player-buttons">
+                    <button onclick="play()">Play</button>
+                    <button onclick="pause()">Pause</button>
+                    <button onclick="toggleMute()">Mute</button>
+                    <button onclick="toggleMute()">Unmute</button>
+                    <button onclick="skipForward()">Avancer</button>
+                </div>
+                <br> <br> <br>
                 <button class="btn-create text-color-white" style="float:right;">Ajouter une chanson</button>
             </div>
             <h2 class="text-color-white">@Model.Myplaylist.title</h2>
+
         </div>
        
         <div class="main-music">
@@ -16,6 +29,7 @@
             <p class="text-color-white">Aucune chanson pour le moment</p>
 
         }
+                        
          @foreach(var item in @Model.Musics){
                 <div class="main-music-item">
                     <div>
@@ -24,9 +38,9 @@
                         <span class="text-color-grey">Date de sortie : @item.published</span>
                     </div>
                     <div class="main-music-btn">
+                        <button  onclick="addToPlayer('@item.file_path')">Ajouter au lecteur</button>
                         <button>Editer</button>
                         <button>Supprimer</button>
-                        <img src="~/images/play.png" height="50" alt="">
                     </div>
                     
                 </div>

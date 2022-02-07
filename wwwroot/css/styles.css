@@ -72,10 +72,11 @@ div.entry-info{
 .btn-playlsit{
   background-color: #ffda2a;
   border-radius: 30px;
-  padding: 5px;
+  padding: 6px 10px;
   border: none;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
+  margin-right: 10px;
 }
 .btn-create:hover{
   background-color: #373737;
@@ -135,7 +136,7 @@ h2{
 div.main-music-btn button{
   background-color: #ffda2a;
   border-radius: 30px;
-  padding: 6px;
+  padding: 6px 10px;
   border: none;
   margin-right: 20px;
   cursor: pointer;
@@ -148,4 +149,25 @@ div.main-music-btn button{
 footer{
   padding: 10px;
   background-color: #373737;
+}
+.player-buttons button {
+    border: 1px solid #ffffff75;
+    background-color: #ffffff75;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 5px;
+    width: 80px;
+    margin: 0 8px;
+}
+.player-buttons button:hover {
+    background-color: #ffda2a;
+    border: 1px solid #ffda2a;
+}
+.player-buttons {
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 40px;
 }

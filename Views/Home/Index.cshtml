@@ -1,5 +1,4 @@
-﻿@Model MusicAudioPlayer.ViewModels.HomeMyplaylistViewModel
-
+﻿
         <div class="middle">
              <div class="entry-info dark-title">
                 <h1>Bienvenue sur votre site de musique</h1>
@@ -19,7 +18,7 @@
                         <img src="@Url.Content(playlist.imagePath)" height="200" alt="">
                         <p class="text-color-white">@playlist.title</p>
                         <button class="btn-playlsit text-color-white">Renommer</button>
-                        @Html.ActionLink("Afficher", "Display", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
+                        @Html.ActionLink("Consulter", "Display", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
                     </div>
                 }
             </div>
