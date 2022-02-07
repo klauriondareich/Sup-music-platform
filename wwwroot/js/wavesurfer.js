@@ -6,7 +6,7 @@ var wavesurfer = WaveSurfer.create({
     progressColor: 'purple'
 });
 
-let state = "pause";
+
 let defaul_audio_path = "/audios/song.mp3";
 
 wavesurfer.load(defaul_audio_path);

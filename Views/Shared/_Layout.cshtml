@@ -8,16 +8,28 @@
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     @* <link rel="stylesheet" href="~/projetASPC.styles.css" asp-append-version="true" /> *@
 </head>
-<body class="dark-body">    
+ <script>
+    
+    let currentState = "dark";
+    let savedState = localStorage.getItem("state");
+
+      // Check if the state already exist
+     if (savedState) currentState = savedState;
+    
+
+ </script>
+    
+<body id="dark-body" onload="getThemeState(currentState)">    
     <div class="container">
         <div class="">
-            <nav class="topbar">
+            <nav id="topbar-dark">
                 <div class="logo">
                     <img src="~/images/logo.png"  alt="logo">
                 </div>
                 <div>
                     <ul  class="menu">
-                        <li><a href=""><img src="~/images/moon.png" alt=""></a></li>
+                        <li onclick="getThemeState('white')"  style="cursor:pointer"><button id="light-btn">White Mode</button></li>
+                        <li onclick="getThemeState('dark')"  style="cursor:pointer"><button id="dark-btn">Dark Mode</button></li>
                         <li><a asp-controller="Home" asp-action="Index">Mes playlists</a></li>
                         <li><a asp-controller="Favoris" asp-action="Index">Mes favoris</a></li>
                         <li><a href="">Laurion Dareich</a></li>
@@ -40,6 +52,7 @@
     </div>
     <script src="https://unpkg.com/wavesurfer.js"></script>
     <script src="~/js/wavesurfer.js"></script>
+     <script src="~/js/theme.js"></script>
     @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script> *@

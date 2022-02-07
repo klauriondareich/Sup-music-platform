@@ -5,7 +5,7 @@
 
             <div class="playlist-entry">
                 <img src="@Url.Content(@Model.Myplaylist.imagePath)" height="200" alt="image"> <br> <br>
-                 <span class="text-color-white">@Model.Musics.Count chansons</span> <br> <br> <br>
+                 <span style="font-weight:bold; font-size:16px" class="text-color-grey">@Model.Musics.Count chansons</span> <br> <br> <br>
 
                 <div id="waveform"></div>
 
@@ -19,31 +19,32 @@
                 <br> <br> <br>
                 <button class="btn-create text-color-white" style="float:right;">Ajouter une chanson</button>
             </div>
-            <h2 class="text-color-white">@Model.Myplaylist.title</h2>
+            <h2 id="color-white">@Model.Myplaylist.title</h2>
 
         </div>
        
         <div class="main-music">
             @if(@Model.Musics.Count == 0)
         {
-            <p class="text-color-white">Aucune chanson pour le moment</p>
+            <p class="text-color-grey">Aucune chanson pour le moment</p>
 
         }
-                        
-         @foreach(var item in @Model.Musics){
-                <div class="main-music-item">
-                    <div>
-                        <p class="text-color-white">Titre : @item.title</p>
-                        <span class="text-color-grey">Artiste : @item.author </span> <br>
-                        <span class="text-color-grey">Date de sortie : @item.published</span>
-                    </div>
-                    <div class="main-music-btn">
-                        <button  onclick="addToPlayer('@item.file_path')">Ajouter au lecteur</button>
-                        <button>Editer</button>
-                        <button>Supprimer</button>
-                    </div>
+            <div class="text-color-grey"> 
+             @foreach(var item in @Model.Musics){
+                    <div class="main-music-item">
+                        <div>
+                            <p style="font-weight:bold">Titre : @item.title</p>
+                            <span>Artiste : @item.author </span> <br>
+                            <span>Date de sortie : @item.published</span>
+                        </div>
+                        <div class="main-music-btn">
+                            <button  onclick="addToPlayer('@item.file_path')">Ajouter au lecteur</button>
+                            <button>Editer</button>
+                            <button>Supprimer</button>
+                        </div>
                     
-                </div>
-            }
+                    </div>
+                }
+            </div>
         </div>
     </div>

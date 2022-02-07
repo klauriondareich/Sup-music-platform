@@ -10,13 +10,13 @@
             </div>
         </div>
 
-        <div class="">
-            <div class="play-list-row">
-                <h2 class="text-color-white">Mes playlists</h2>
+        <div>
+            <div class="play-list-row" id="color-white">
+                <h2  id="border-white">Mes playlists</h2>
                 @foreach(var playlist in Model.Myplaylist){
                     <div class="play-list-item">
                         <img src="@Url.Content(playlist.imagePath)" height="200" alt="">
-                        <p class="text-color-white">@playlist.title</p>
+                        <p>@playlist.title</p>
                         <button class="btn-playlsit text-color-white">Renommer</button>
                         @Html.ActionLink("Consulter", "Display", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
                     </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NDe9k75bth9SVVxyoOfQQMQZoUUl4DjdOxbbyO2s5S0=",
+  "Hash": "Y+zaPwiWdjyjLAgF64iQcRTKSyy8mRH3TcXIHp61XcQ=",
   "Source": "MusicAudioPlayer",
   "BasePath": "_content/MusicAudioPlayer",
   "Mode": "Default",
@@ -406,6 +406,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\js\\theme.js",
+      "SourceId": "MusicAudioPlayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\",
+      "BasePath": "_content/MusicAudioPlayer",
+      "RelativePath": "js/theme.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\theme.js"
     },
     {
       "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\js\\wavesurfer.js",

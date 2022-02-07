@@ -1,20 +1,27 @@
-.topbar{
+#topbar-dark{
   display: flex;
   justify-content: space-between;
   background-color: #373737;
+}
+#topbar-white {
+    display: flex;
+    justify-content: space-between;
+    background-color: #b2b2b2;
 }
 .menu{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #373737;
 }
 body{
   padding: 0;
   margin: 0;
 }
-.dark-body{
+#dark-body{
   background-color: #171717;
+}
+#white-body {
+    background-color: #fff;
 }
 ul{
   padding: 0 20px;
@@ -77,12 +84,20 @@ div.entry-info{
   text-decoration: none;
   font-size: 14px;
   margin-right: 10px;
+  cursor: pointer;
 }
 .btn-create:hover{
   background-color: #373737;
+  color: #fff;
 }
 .text-color-white{
   color: #fff;
+}
+#color-white {
+    color: #fff;
+}
+#color-dark {
+    color: #000;
 }
 .logo{
   padding: 10px 20px;
@@ -100,9 +115,13 @@ div.entry-info{
 .play-list-item img{
   transition: transform .2s;
 }
-.play-list-row h2{
-  border-bottom: 1px solid #fff;
-  padding-bottom: 10px;
+.play-list-row h2#border-white {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+.play-list-row h2#border-dark {
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
 }
 .play-list-item img:hover{
   cursor: pointer;
@@ -125,13 +144,14 @@ h2{
  padding: 20px;
  display: flex;
  justify-content: space-between;
+ font-size: 18px;
 }
-.main-music-item:hover{
- background-color: #ffffff21;
- cursor: pointer;
+.main-music-item:hover {
+    background-color: #acacac4f;
+    cursor: pointer;
 }
-.text-color-grey{
- color: #ffffff75;
+.text-color-grey {
+    color: #acacac;
 }
 div.main-music-btn button{
   background-color: #ffda2a;
@@ -152,7 +172,7 @@ footer{
 }
 .player-buttons button {
     border: 1px solid #ffffff75;
-    background-color: #ffffff75;
+    background-color: #acacac;
     outline: none;
     border-radius: 2px;
     cursor: pointer;
@@ -170,4 +190,24 @@ footer{
     margin: auto;
     border: 1px solid grey;
     border-radius: 40px;
+}
+.show{
+    display: inline-block;
+}
+.hide {
+    display: none!important;
+}
+#light-btn {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#dark-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
 }
