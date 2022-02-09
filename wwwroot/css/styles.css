@@ -211,3 +211,32 @@ footer{
     padding: 5px 10px;
     cursor: pointer;
 }
+#playlistForm label{
+  display: block;
+  font-size: 16px;
+  color: #acacac;
+  padding-bottom: 15px;
+}
+#playlistForm input{
+  padding: 5px;
+  width: 400px;
+}
+#playlistForm {
+  width: 400px;
+  margin: auto;
+  padding: 100px 0;
+}
+#playlistForm label:nth-child(1){
+  padding-top: 15px;
+}
+#playlistForm div:nth-child(1) input{
+  margin-bottom: 15px;
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
