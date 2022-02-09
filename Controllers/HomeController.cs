@@ -25,7 +25,7 @@ namespace MusicAudioPlayer.Controllers
 
         {
             
-            var playlists = _context.Myplaylist.ToList();
+            var playlists = _context.Myplaylist.OrderByDescending(p => p.Id).ToList();
 
             var viewModel = new HomeMyplaylistViewModel
             {
