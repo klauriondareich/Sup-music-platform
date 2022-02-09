@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MusicAudioPlayer.Data;
 using MusicAudioPlayer.Models.ViewModels;
+using MusicAudioPlayer.Models;
 
 
 namespace MusicAudioPlayer.Controllers
@@ -32,17 +33,28 @@ namespace MusicAudioPlayer.Controllers
             return View(viewModel);
         }
 
-        [Route("playlist/new")]
-        public IActionResult NewPlaylist()
+
+        // GET: HomeController1/Create
+        [Route("playlist/create")]
+        public ActionResult Create()
         {
             return View();
         }
 
-        [HttpPost]
+        // POST: HomeController1/Create
         [Route("playlist/create")]
-        public IActionResult Create()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind("Id", "title", "imagePath")] Myplaylist playlist)
         {
+            if (ModelState.IsValid)
+            {
+                _context.Add(playlist);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
+
     }
 }

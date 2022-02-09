@@ -31,12 +31,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projets/supinfo/MusicAudioPlayer/MusicAudioPlayer/Views/Playlist/Display.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RcRGlzcGxheS5jc2h0bWw=
+[C:/Projets/supinfo/MusicAudioPlayer/MusicAudioPlayer/Views/Playlist/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projets/supinfo/MusicAudioPlayer/MusicAudioPlayer/Views/Playlist/NewPlaylist.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RcTmV3UGxheWxpc3QuY3NodG1s
+[C:/Projets/supinfo/MusicAudioPlayer/MusicAudioPlayer/Views/Playlist/Display.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWxpc3RcRGlzcGxheS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projets/supinfo/MusicAudioPlayer/MusicAudioPlayer/Views/Shared/Error.cshtml]
