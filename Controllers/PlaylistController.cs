@@ -31,5 +31,18 @@ namespace MusicAudioPlayer.Controllers
 
             return View(viewModel);
         }
+
+        [Route("playlist/new")]
+        public IActionResult NewPlaylist()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("playlist/create")]
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
