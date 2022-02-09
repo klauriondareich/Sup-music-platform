@@ -11,7 +11,7 @@ function whiteTheme(){
     body.setAttribute("id", "white-body");
     topbar.setAttribute("id", "topbar-white");
     if (bordercolor) bordercolor.setAttribute("id", "border-dark");
-    textcolor.setAttribute("id", "color-dark");
+    if (textcolor) textcolor.setAttribute("id", "color-dark");
 }
 
 function darkTheme() {
@@ -36,7 +36,6 @@ function getThemeState(state) {
         document.getElementById("dark-btn").setAttribute("class", "show");
     }
 
-    console.log("loaded")
 }
 
    
