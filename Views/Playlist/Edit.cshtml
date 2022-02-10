@@ -1,0 +1,17 @@
+﻿@model MusicAudioPlayer.Models.Myplaylist
+
+<div id="playlistForm">
+    @using (Html.BeginForm("Edit", "Playlist")) {
+
+        <div>
+            <label for="title">Titre de la playlist</label>
+            @Html.TextBoxFor(m => m.title)
+        </div>
+        <div>
+            <label for="imagePath">Lien de l'image de couverture</label>
+            @Html.TextBoxFor(m => m.imagePath) 
+        </div>
+        <button type="submit" class="btn-playlsit" style="margin-top: 20px;">Valider</button>
+    }
+
+</div>
