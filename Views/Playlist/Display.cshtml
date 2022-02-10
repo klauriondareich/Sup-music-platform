@@ -17,7 +17,9 @@
                     <button onclick="skipForward()">Avancer</button>
                 </div>
                 <br> <br> <br>
-                <button class="btn-create text-color-white" style="float:right;">Ajouter une chanson</button>
+               
+                <button class="btn-create text-color-white">Ajouter une chanson</button>
+                 @Html.ActionLink("Supprimer la playlist", "Delete", "Playlist", new {Id = @Model.Myplaylist.Id}, new {@class="btn-delete text-color-white float-right"})
             </div>
             <h2 id="color-white">@Model.Myplaylist.title</h2>
 

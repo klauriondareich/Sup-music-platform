@@ -65,7 +65,7 @@ namespace MusicAudioPlayer.Controllers
             return View(playlist);
         }
 
-        // POST: Edit a playlist
+        // UPDATE: Edit a playlist
         [Route("playlist/edit/{Id}")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -78,6 +78,19 @@ namespace MusicAudioPlayer.Controllers
             _context.Update(playlist);
             _context.SaveChanges();
             return RedirectToAction("Index", "Home");
+        }
+
+        // DELETE: Delete a playlist
+        public ActionResult Delete(int Id)
+        {
+            var playlist = _context.Myplaylist.FirstOrDefault(p => p.Id == Id);
+            if (playlist != null)
+            {
+                _context.Myplaylist.Remove(playlist);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return View(playlist);
         }
 
     }
