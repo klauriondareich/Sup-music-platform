@@ -1,4 +1,4 @@
-﻿
+﻿ 
         <div class="middle">
              <div class="entry-info dark-title">
                 <h1>Bienvenue sur votre site de musique</h1>
@@ -13,6 +13,12 @@
         <div>
             <div class="play-list-row" id="color-white">
                 <h2  id="border-white">Mes playlists</h2>
+
+                @if(@Model.Myplaylist.Count == 0){
+
+                    <p  class="text-color-grey">Aucune playlist pour le moment ..</p>
+                }
+
                 @foreach(var playlist in Model.Myplaylist){
                     <div class="play-list-item">
                         <img src="@Url.Content(playlist.imagePath)" height="200" alt="">

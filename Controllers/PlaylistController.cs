@@ -61,22 +61,23 @@ namespace MusicAudioPlayer.Controllers
         [Route("playlist/edit/{Id}")]
         public ActionResult Edit(int Id)
         {
-            return View();
+            var playlist = _context.Myplaylist.FirstOrDefault(n => n.Id == Id)!;
+            return View(playlist);
         }
 
         // POST: Edit a playlist
-        [Route("playlist/edit")]
+        [Route("playlist/edit/{Id}")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind("Id", "title", "imagePath")] Myplaylist playlist)
+        public ActionResult Edit(int Id, [Bind("Id", "title", "imagePath")] Myplaylist playlist)
         {
-            if (ModelState.IsValid)
-            {
-               /* _context.Add(playlist);
-                _context.SaveChanges();
-                return RedirectToAction("Index", "Home");*/
-            }
-            return View();
+            if (Id != playlist.Id) return NotFound();
+
+            if (!ModelState.IsValid) return View(playlist);
+
+            _context.Update(playlist);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
 
     }
