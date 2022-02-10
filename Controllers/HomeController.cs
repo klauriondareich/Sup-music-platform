@@ -24,7 +24,7 @@ namespace MusicAudioPlayer.Controllers
         public IActionResult Index()
 
         {
-            
+            // Get playlists in DESC order
             var playlists = _context.Myplaylist.OrderByDescending(p => p.Id).ToList();
 
             var viewModel = new HomeMyplaylistViewModel
