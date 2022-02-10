@@ -17,7 +17,7 @@
                     <div class="play-list-item">
                         <img src="@Url.Content(playlist.imagePath)" height="200" alt="">
                         <p>@playlist.title</p>
-                        <button class="btn-playlsit text-color-white">Renommer</button>
+                        @Html.ActionLink("Renommer", "Edit", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
                         @Html.ActionLink("Consulter", "Display", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
                     </div>
                 }
