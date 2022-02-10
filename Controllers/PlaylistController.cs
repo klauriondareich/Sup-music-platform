@@ -15,6 +15,7 @@ namespace MusicAudioPlayer.Controllers
             _context = context;
         }
 
+        // GET: Display all playlists
         [Route("playlist/view/{Id}")]
         public IActionResult Display(int Id)
 
@@ -34,14 +35,14 @@ namespace MusicAudioPlayer.Controllers
         }
 
 
-        // GET: HomeController1/Create
+        // GET: PlaylistController/Create
         [Route("playlist/create")]
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: HomeController1/Create
+        // POST: Save a playlist in Db
         [Route("playlist/create")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -52,6 +53,28 @@ namespace MusicAudioPlayer.Controllers
                 _context.Add(playlist);
                 _context.SaveChanges();
                 return RedirectToAction("Index", "Home");
+            }
+            return View();
+        }
+
+        // GET: PlaylistController/Edit
+        [Route("playlist/edit/{Id}")]
+        public ActionResult Edit(int Id)
+        {
+            return View();
+        }
+
+        // POST: Edit a playlist
+        [Route("playlist/edit")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind("Id", "title", "imagePath")] Myplaylist playlist)
+        {
+            if (ModelState.IsValid)
+            {
+               /* _context.Add(playlist);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Home");*/
             }
             return View();
         }
