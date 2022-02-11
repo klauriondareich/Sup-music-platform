@@ -24,7 +24,7 @@ namespace MusicAudioPlayer.Controllers
         public IActionResult Index()
 
         {
-            // Get playlists in DESC order
+            // Get all playlists in DESC order (From recent to the last)
             var playlists = _context.Myplaylist.OrderByDescending(p => p.Id).ToList();
 
             var viewModel = new HomeMyplaylistViewModel
@@ -36,11 +36,6 @@ namespace MusicAudioPlayer.Controllers
         }
 
        
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
