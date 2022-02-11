@@ -15,7 +15,7 @@ namespace MusicAudioPlayer.Controllers
             _context = context;
         }
 
-        // GET: Display all playlists
+        // GET: Display information of the playlist and musics inside it
         [Route("playlist/view/{Id}")]
         public IActionResult Display(int Id)
 
@@ -35,7 +35,7 @@ namespace MusicAudioPlayer.Controllers
         }
 
 
-        // GET: PlaylistController/Create
+        // GET: Display a create playlist view
         [Route("playlist/create")]
         public ActionResult Create()
         {
@@ -57,7 +57,7 @@ namespace MusicAudioPlayer.Controllers
             return View();
         }
 
-        // GET: PlaylistController/Edit
+        // GET: Display edit playlist view
         [Route("playlist/edit/{Id}")]
         public ActionResult Edit(int Id)
         {
@@ -65,7 +65,7 @@ namespace MusicAudioPlayer.Controllers
             return View(playlist);
         }
 
-        // UPDATE: Edit a playlist
+        // UPDATE: Edit a playlist and save new data in DB
         [Route("playlist/edit/{Id}")]
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -92,6 +92,5 @@ namespace MusicAudioPlayer.Controllers
             }
             return View(playlist);
         }
-
     }
 }
