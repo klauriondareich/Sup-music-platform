@@ -241,9 +241,6 @@ namespace MusicAudioPlayer.Data.Migrations
                     b.Property<int?>("playId")
                         .HasColumnType("int");
 
-                    b.Property<string>("published")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("title")
                         .HasColumnType("nvarchar(max)");
 
