@@ -68,7 +68,7 @@ namespace MusicAudioPlayer.Controllers
         }
 
         // DELETE: Delete a music
-        public ActionResult Delete(int Id)
+        public ActionResult Delete(int Id, int playlistId)
         {
             var myMusic = _context.Musics.FirstOrDefault(p => p.Id == Id);
             if (myMusic != null)
@@ -76,7 +76,7 @@ namespace MusicAudioPlayer.Controllers
                 _context.Musics.Remove(myMusic);
                 _context.SaveChanges();
             }
-            return RedirectToAction("Display", "Playlist");
+            return RedirectToAction("Display", "Playlist", new { Id = playlistId });
 
         }
     }

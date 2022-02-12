@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LwJiLJG19+ER7ytexCC7KUdNmYcsPmfxxNsnhAmMKM8=",
+  "Hash": "QhGhybEmnPe9VmK7QrQaonNI7GTKWPJeAn6vjItlLIw=",
   "Source": "MusicAudioPlayer",
   "BasePath": "_content/MusicAudioPlayer",
   "Mode": "Default",
@@ -406,23 +406,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\volume.png"
-    },
-    {
-      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\js\\fileUpload.js",
-      "SourceId": "MusicAudioPlayer",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\",
-      "BasePath": "_content/MusicAudioPlayer",
-      "RelativePath": "js/fileUpload.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\fileUpload.js"
     },
     {
       "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\js\\theme.js",
