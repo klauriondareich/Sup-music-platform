@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X0bPPkc1DMCgLorFqxvEUWWI/rWR/IJ8VTlgsmJ/WJY=",
+  "Hash": "LwJiLJG19+ER7ytexCC7KUdNmYcsPmfxxNsnhAmMKM8=",
   "Source": "MusicAudioPlayer",
   "BasePath": "_content/MusicAudioPlayer",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\audios\\joeboy.mp3"
+    },
+    {
+      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\relax.mp3",
+      "SourceId": "MusicAudioPlayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\",
+      "BasePath": "_content/MusicAudioPlayer",
+      "RelativePath": "audios/relax.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\audios\\relax.mp3"
     },
     {
       "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\song.mp3",
@@ -389,6 +406,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\volume.png"
+    },
+    {
+      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\js\\fileUpload.js",
+      "SourceId": "MusicAudioPlayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\",
+      "BasePath": "_content/MusicAudioPlayer",
+      "RelativePath": "js/fileUpload.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\fileUpload.js"
     },
     {
       "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\js\\theme.js",
