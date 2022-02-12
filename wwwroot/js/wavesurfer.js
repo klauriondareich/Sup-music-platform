@@ -1,9 +1,9 @@
 ﻿// Wavesurfer Init
 
-var wavesurfer = WaveSurfer.create({
+let wavesurfer = WaveSurfer.create({
     container: '#waveform',
     waveColor: 'violet',
-    progressColor: 'purple'
+    progressColor: 'purple',
 });
 
 
@@ -14,7 +14,6 @@ wavesurfer.load(defaul_audio_path);
 
 function addToPlayer(audio_path) {
     wavesurfer.load(audio_path);
-    console.log(audio_path)
 };
 
 let play = () => wavesurfer.play();
