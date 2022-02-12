@@ -18,7 +18,8 @@
                 </div>
                 <br> <br> <br>
                
-                <button class="btn-create text-color-white">Ajouter une chanson</button>
+
+                @Html.ActionLink("Ajouter une chanson", "Create", "Music", new {Id = @Model.Myplaylist.Id}, new {@class="btn-create text-color-white"})
                  @Html.ActionLink("Supprimer la playlist", "Delete", "Playlist", new {Id = @Model.Myplaylist.Id}, new {@class="btn-delete text-color-white float-right"})
             </div>
             <h2 id="color-white">@Model.Myplaylist.title</h2>
@@ -41,8 +42,8 @@
                         </div>
                         <div class="main-music-btn">
                             <button  onclick="addToPlayer('@item.file_path')">Ajouter au lecteur</button>
-                            <button>Editer</button>
-                            <button>Supprimer</button>
+                            @Html.ActionLink("Editer", "Edit", "Music", new {playlistId = @Model.Myplaylist.Id, Id = item.Id} )
+                            @Html.ActionLink("Supprimer", "Delete", "Music", new {Id = item.Id}) 
                         </div>
                     
                     </div>
