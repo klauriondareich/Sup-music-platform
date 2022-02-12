@@ -27,8 +27,10 @@ namespace MusicAudioPlayer.Controllers
             if (playlistObj == null) return NotFound();
 
             var viewModel = new DisplayMusicViewModel{
+
                 Myplaylist = playlistObj,
-                Musics = musics
+                Musics = musics,
+
             };
 
             return View(viewModel);
