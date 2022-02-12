@@ -172,6 +172,17 @@ div.main-music-btn button{
   margin-right: 20px;
   cursor: pointer;
 }
+div.main-music-btn a {
+    background-color: #ffda2a;
+    border-radius: 30px;
+    padding: 6px 10px;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
 .add-music-bloc{
   position: relative;
   left: 800px;
