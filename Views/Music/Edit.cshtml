@@ -1,5 +1,25 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model MusicAudioPlayer.Models.Music
+
+<div id="playlistForm">
+    @using (Html.BeginForm("Edit", "Music")) {
+
+        <div>
+            <label for="title">Titre de la chanson</label>
+            @Html.TextBoxFor(m => m.title)
+        </div>
+        <div>
+            <label for="author">Artiste</label>
+            @Html.TextBoxFor(m => m.author) 
+        </div>
+         <div>
+            <label for="published">Date de sortie</label>
+            @Html.TextBoxFor(m => m.published) 
+        </div>
+        <div>
+            <label for="file_path">Lien de la chanson</label>
+            @Html.TextBoxFor(m => m.file_path) 
+        </div>
+        <button type="submit" class="btn-playlsit" style="margin-top: 20px;">Valider</button>
+    }
+
+</div>
