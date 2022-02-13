@@ -16,9 +16,9 @@ namespace MusicAudioPlayer.Data
                 .HasForeignKey(p => p.userId);
         }*/
 
-        public DbSet<Myplaylist> Myplaylist { get; set; }
+        public DbSet<Myplaylist>? Myplaylist { get; set; }
 
-        public DbSet<Music> Musics { get; set; }
+        public DbSet<Music>? Musics { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

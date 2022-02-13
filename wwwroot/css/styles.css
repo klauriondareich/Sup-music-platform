@@ -263,4 +263,12 @@ footer{
 .float-right {
   float:right;
 }
+.form-auth {
+    padding: 30px;
+}
+.form-auth input {
+    padding: 10px;
+    width: 400px;
+    margin-top: 20px;
+}
 
