@@ -38,7 +38,7 @@
                             @if (SignInManager.IsSignedIn(User))
                            {
                             <li><a asp-controller="Home" asp-action="Index">Mes playlists</a></li>
-                            <li><a asp-controller="Favoris" asp-action="Index">Mes favoris</a></li>
+                            <li><a href="#">Mes favoris</a></li>
                             <li>
                                <a  class="" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
                             </li>

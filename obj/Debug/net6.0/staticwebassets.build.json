@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RZRs/ofgnjF62COvpaGI8ILSsFeYbVaZrRO7c4p9Xpw=",
+  "Hash": "cG9FsQQ8bXZ/BkPEpWDrcfiCd9iHa++ApZHlehOaxtI=",
   "Source": "MusicAudioPlayer",
   "BasePath": "_content/MusicAudioPlayer",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MusicAudioPlayer.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\cradle.mp3",
+      "SourceId": "MusicAudioPlayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\",
+      "BasePath": "_content/MusicAudioPlayer",
+      "RelativePath": "audios/cradle.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\audios\\cradle.mp3"
+    },
+    {
       "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\joeboy.mp3",
       "SourceId": "MusicAudioPlayer",
       "SourceType": "Discovered",
@@ -66,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\audios\\joeboy.mp3"
+    },
+    {
+      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\moment.mp3",
+      "SourceId": "MusicAudioPlayer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\",
+      "BasePath": "_content/MusicAudioPlayer",
+      "RelativePath": "audios/moment.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\audios\\moment.mp3"
     },
     {
       "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\relax.mp3",
@@ -85,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\audios\\relax.mp3"
     },
     {
-      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\song.mp3",
+      "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\audios\\tayc.mp3",
       "SourceId": "MusicAudioPlayer",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\",
       "BasePath": "_content/MusicAudioPlayer",
-      "RelativePath": "audios/song.mp3",
+      "RelativePath": "audios/tayc.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +133,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\audios\\song.mp3"
+      "OriginalItemSpec": "wwwroot\\audios\\tayc.mp3"
     },
     {
       "Identity": "C:\\Projets\\supinfo\\MusicAudioPlayer\\MusicAudioPlayer\\wwwroot\\css\\site.css",
