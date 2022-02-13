@@ -8,7 +8,7 @@ namespace MusicAudioPlayer.Models
         public string? title {get; set;}
         public string? imagePath {get; set;}
 
-       /* public virtual IdentityUser? User {get; set;}
-        public string? userId {get; set; }*/
+        public virtual IdentityUser? User { get; set; }
+        public string? userId { get; set; }
     }
 }

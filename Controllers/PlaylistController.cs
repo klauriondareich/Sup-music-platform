@@ -50,8 +50,15 @@ namespace MusicAudioPlayer.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind("Id", "title", "imagePath")] Myplaylist playlist)
         {
+            // Getting current user data
+            var userName = User?.Identity?.Name;
+            var user = _context.Users.FirstOrDefault(p => p.UserName == userName);
+            if (user == null) return NotFound();
+
+
             if (ModelState.IsValid)
             {
+                playlist.userId = user.Id;
                 _context.Add(playlist);
                 _context.SaveChanges();
                 return RedirectToAction("Index", "Home");
@@ -63,7 +70,7 @@ namespace MusicAudioPlayer.Controllers
         [Route("playlist/edit/{Id}")]
         public ActionResult Edit(int Id)
         {
-            var playlist = _context.Myplaylist.FirstOrDefault(n => n.Id == Id)!;
+            var playlist = _context.Myplaylist?.FirstOrDefault(n => n.Id == Id)!;
             return View(playlist);
         }
 
@@ -85,7 +92,7 @@ namespace MusicAudioPlayer.Controllers
         // DELETE: Delete a playlist
         public ActionResult Delete(int Id)
         {
-            var playlist = _context.Myplaylist.FirstOrDefault(p => p.Id == Id);
+            var playlist = _context.Myplaylist?.FirstOrDefault(p => p.Id == Id);
             if (playlist != null)
             {
                 _context.Myplaylist.Remove(playlist);

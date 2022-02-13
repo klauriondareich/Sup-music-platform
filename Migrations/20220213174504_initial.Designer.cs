@@ -3,21 +3,23 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MusicAudioPlayer.Data;
 
 #nullable disable
 
-namespace MusicAudioPlayer.Data.Migrations
+namespace MusicAudioPlayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220213174504_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
+                .HasAnnotation("ProductVersion", "6.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -241,6 +243,9 @@ namespace MusicAudioPlayer.Data.Migrations
                     b.Property<int?>("playId")
                         .HasColumnType("int");
 
+                    b.Property<string>("published")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("title")
                         .HasColumnType("nvarchar(max)");
 
@@ -263,7 +268,12 @@ namespace MusicAudioPlayer.Data.Migrations
                     b.Property<string>("title")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("userId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("userId");
 
                     b.ToTable("Myplaylist");
                 });
@@ -317,6 +327,15 @@ namespace MusicAudioPlayer.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MusicAudioPlayer.Models.Myplaylist", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("userId");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

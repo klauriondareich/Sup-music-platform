@@ -7,14 +7,14 @@ namespace MusicAudioPlayer.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
-        /*protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
             builder.Entity<IdentityUser>()
                 .HasMany<Myplaylist>()
-                .WithMany(p => p.User)
+                .WithOne(p => p.User)
                 .HasForeignKey(p => p.userId);
-        }*/
+        }
 
         public DbSet<Myplaylist>? Myplaylist { get; set; }
 

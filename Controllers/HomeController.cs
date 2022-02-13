@@ -24,8 +24,20 @@ namespace MusicAudioPlayer.Controllers
         public IActionResult Index()
 
         {
-            // Get all playlists in DESC order (From recent to the last)
-            var playlists = _context.Myplaylist.OrderByDescending(p => p.Id).ToList();
+            List<Myplaylist> playlists = new List<Myplaylist>();
+
+           
+            if ((bool)(User?.Identity?.IsAuthenticated))
+            {
+                // Getting current user data
+                var userName = User?.Identity?.Name;
+                var user = _context.Users.FirstOrDefault(p => p.UserName == userName);
+
+                // Get all playlists of a User in DESC order (From recent to the last)
+                 playlists = _context.Myplaylist?.Where(item => item.userId == user.Id).OrderByDescending(p => p.Id).ToList();
+            }
+          
+            
 
             var viewModel = new HomeMyplaylistViewModel
             {
