@@ -44,7 +44,7 @@
                             <button onclick="addToPlayer('@item.file_path')">Ajouter au lecteur</button>
                             @Html.ActionLink("Editer", "Edit", "Music", new {playlistId = @Model.Myplaylist.Id, Id = item.Id} )
                             @Html.ActionLink("Supprimer", "Delete", "Music", new {Id = item.Id, playlistId = @Model.Myplaylist.Id}) 
-                        </div>
+                        </div>  
                     
                     </div>
                 }

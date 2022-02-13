@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -32,8 +36,14 @@
                         <li onclick="getThemeState('dark')"  style="cursor:pointer"><button id="dark-btn">Dark Mode</button></li>
                         <li><a asp-controller="Home" asp-action="Index">Mes playlists</a></li>
                         <li><a asp-controller="Favoris" asp-action="Index">Mes favoris</a></li>
-                        <li><a href="">Laurion Dareich</a></li>
-                        <li><a href="">Se deconnecter</a></li>
+                        <li>
+                           <a  class="" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+                        </li>
+                        <li>
+                            <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button  type="submit" class="btn-playlsit">Se déconnecter</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </nav>
