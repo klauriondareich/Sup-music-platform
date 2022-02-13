@@ -1,31 +1,46 @@
-﻿ 
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
         <div class="middle">
              <div class="entry-info dark-title">
                 <h1>Bienvenue sur votre site de musique</h1>
                 <p>Ecoutez de la musique partout où vous êtes.</p>
-                <a class="btn-create text-color-white" asp-controller="Playlist" asp-action="Create">Créer une nouvelle playlist</a>
+                    @if (SignInManager.IsSignedIn(User))
+                 {
+                    <a class="btn-create text-color-white" asp-controller="Playlist" asp-action="Create">Créer une nouvelle playlist</a>
+                 }
             </div>
             <div class="picture">
                 <img src="~/images/picture.jpg" height="500" alt="picture">
             </div>
         </div>
 
+
         <div>
             <div class="play-list-row" id="color-white">
                 <h2  id="border-white">Mes playlists</h2>
+                 @if (SignInManager.IsSignedIn(User))
+                 {
+                    @if(@Model.Myplaylist.Count == 0){
 
-                @if(@Model.Myplaylist.Count == 0){
+                        <p  class="text-color-grey">Aucune playlist pour le moment ..</p>
+                    }
 
-                    <p  class="text-color-grey">Aucune playlist pour le moment ..</p>
-                }
-
-                @foreach(var playlist in Model.Myplaylist){
-                    <div class="play-list-item">
-                        <img src="@Url.Content(playlist.imagePath)" height="200" alt="">
-                        <p>@playlist.title</p>
-                        @Html.ActionLink("Renommer", "Edit", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
-                        @Html.ActionLink("Consulter", "Display", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
-                    </div>
-                }
-            </div>
+                    @foreach(var playlist in Model.Myplaylist){
+                        <div class="play-list-item">
+                            <img src="@Url.Content(playlist.imagePath)" height="200" alt="">
+                            <p>@playlist.title</p>
+                            @Html.ActionLink("Renommer", "Edit", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
+                            @Html.ActionLink("Consulter", "Display", "Playlist", new {Id = playlist.Id}, new {@class="btn-playlsit text-color-white"})
+                        </div>
+            }
+        }
+        else
+        {
+             <p class="text-color-grey">
+                 Vous n'avez aucune playlist. Vous devez vous connecter pour gérer vos playlists
+             </p>
+        }
+    </div>
         </div>
