@@ -83,7 +83,7 @@ namespace MusicAudioPlayer.Controllers
             if (Id != playlist.Id) return NotFound();
 
             if (!ModelState.IsValid) return View(playlist);
-
+            // save userId when updated: Fix bug with this
             _context.Update(playlist);
             _context.SaveChanges();
             return RedirectToAction("Index", "Home");
